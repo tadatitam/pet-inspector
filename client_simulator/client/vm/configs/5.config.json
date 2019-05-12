@@ -1,0 +1,9 @@
+{
+    "fonts": ["Mordred", "OldLondon"],
+    "displaywidth": 300,
+    "displayheight": 200,
+    "displaydepth": 16,
+    "language": "ja",
+    "timezone": "Etc/GMT+10",
+    "bravever": "https://github.com/brave/browser-laptop/releases/download/v0.23.8beta/brave-beta_0.23.8_amd64.deb"
+}

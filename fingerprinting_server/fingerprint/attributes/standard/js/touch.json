@@ -1,0 +1,7 @@
+{
+  "name" : "touch",
+  "description" : "A boolean string indicating whether touch is supported on the user's browser",
+  "files" : ["touch.js"],
+  "variables" : ["touch support"],
+  "hash" : "False"
+}

@@ -1,0 +1,7 @@
+{
+  "name" : "jsFonts",
+  "description" : "A hash of a list of detected font types using javascript from the user's browser",
+  "files" : ["jsFonts.js"],
+  "variables" : ["hash of fonts detected by javascript"],
+  "hash" : "True"
+}

@@ -1,0 +1,12 @@
+{
+    "fonts": ["OldLondonAlternate"],
+    "displaywidth": 850,
+    "displayheight": 550,
+    "displaydepth": "24+32",
+    "language": "fr",
+    "timezone": "Etc/GMT-6",
+    "firefoxver": "56.0b1",
+    "chromever": "61.0.3163.79",
+    "torver": "8.0a8",
+    "bravever": "0.19.134"
+}

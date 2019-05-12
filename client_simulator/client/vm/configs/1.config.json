@@ -1,0 +1,8 @@
+{
+    "fonts": ["OldLondon"], 
+    "displaywidth": 2000,
+    "displayheight": 2000,
+    "displaydepth": 16,
+    "language": "de",
+    "timezone": "Etc/GMT-3"
+}

@@ -1,0 +1,8 @@
+{
+  "name" : "open_db",
+  "description" : "A boolean string indicating whether Open Database is enable in the user's browser.",
+  "files" : ["open_db.js"],
+  "variables" :["openDB"], 
+  "hash" : "False",
+  "URL" : "https://www.tutorialspoint.com/html5/html5_web_sql.html" 
+}

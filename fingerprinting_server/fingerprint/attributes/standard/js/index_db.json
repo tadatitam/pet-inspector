@@ -1,0 +1,8 @@
+{
+  "name" : "index_db",
+  "description" : "A boolean string indicating whether indexedDB is enable in the user's browser.",
+  "files" : ["index_db.js"],
+  "variables" :["indexedDB"], 
+  "hash" : "False",
+  "URL" : "https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API" 
+}

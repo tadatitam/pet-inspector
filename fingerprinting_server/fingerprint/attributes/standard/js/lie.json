@@ -1,0 +1,7 @@
+{
+  "name" : "lie",
+  "description" : "A set of boolean strings indicating whether the user's browser has lied with ...",
+  "files" : ["lie.js"],
+  "variables" : ["has user lied with"],
+  "hash" : "False"
+}

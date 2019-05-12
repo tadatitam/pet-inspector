@@ -1,0 +1,9 @@
+{
+    "fp_sites": ["http://192.168.4.204:8000/", "http://192.168.4.204:8001/"],
+    "socks5_proxy":  false,
+    "proxy_setting": { "address": "127.0.0.1",
+                       "port": 8000,
+                       "bypass-list": "localhost, 127.0.0.1"
+                        }
+}
+

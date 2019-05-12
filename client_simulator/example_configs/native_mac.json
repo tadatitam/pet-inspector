@@ -1,0 +1,23 @@
+{
+    "type": "native",
+    "experiment_name": "exp06",
+    "oses": ["MacOS"],
+    "configs": { 
+                "MacOS": ["None"]
+                },
+    "browsers": ["firefox", "chrome"],
+    "pets": {
+        "firefox":  ["None", "blend_in", "blender", 
+                    "canvas_defender_f", "canvasblocker", 
+                    "stop_fingerprinting", "tor", 
+                    "totalspoof", 
+                    "no_enumerable_extensions"], 
+        "chrome":   ["None", 
+                    "brave", 
+                    "glove", "hide_my_footprint", "privacy_extension", 
+                    "canvas_defender_c", "trace", "canvas_fingerprint_block"
+                    ]
+        },
+    "repeats": 3, 
+    "test_behaviors": ["cross_site", "cross_reload"]
+}

@@ -1,0 +1,12 @@
+{
+    "fonts": ["Mordred", "OldLondon", "OldLondonAlternate"],
+    "displaywidth": 320,
+    "displayheight": 256,
+    "displaydepth": 8,
+    "language": "vi",
+    "timezone": "Etc/GMT+3",
+    "firefoxver": "56.0b3",
+    "chromever": "62.0.3202.75",
+    "torver": "7.5.6",
+    "bravever": "0.19.134"
+}

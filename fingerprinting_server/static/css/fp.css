@@ -1,0 +1,50 @@
+.fa {
+    font-size: 18px;
+}
+.clickableGlyph {
+    cursor: pointer;
+}
+
+.hideAcc tr > *:nth-child(7) {
+    display: none;
+}
+
+.hidePer tr > *:nth-child(3) {
+    display: none;
+}
+.hidePerLimit tr > *:nth-child(4) {
+    display: none;
+}
+.hidePerTotal tr > *:nth-child(5) {
+    display: none;
+}
+.hidePerTotalLimit tr > *:nth-child(6) {
+    display: none;
+}
+
+.tableCustom {
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+.tableCustom tr > *:nth-child(1) {
+    width: 30%;
+}
+.tableCustom tr > *:nth-child(2) {
+    width: 50%;
+}
+.tableCustom tr > *:nth-child(3){
+    width: 8%;
+}
+.tableCustom tr > *:nth-child(4){
+    width: 8%;
+}
+.tableCustom tr > *:nth-child(5){
+    width: 8%;
+}
+.tableCustom tr > *:nth-child(6){
+    width: 8%;
+}
+.tableCustom tr > *:nth-child(7) {
+    width: 12%;
+}

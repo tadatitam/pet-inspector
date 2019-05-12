@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% set active_page = "tor" %}
+
+{% block title %}
+    Tor - FP Central
+{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+     /* Icon when the collapsible content is shown */
+    .details:after {
+        font-family: "FontAwesome";
+        content: "\f078";
+    }
+    /* Icon when the collapsible content is hidden */
+    .details.collapsed:after {
+        content: "\f054";
+    }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <h1 data-intro="This page is made for Tor browser users to help them configure their browser so that their fingerprint
+        is as common as possible." data-step="1"> {{ _('Acceptable values for the Tor browser') }}</h1>
+    <p>
+        {{ _('The approach of the Tor browser towards browser fingerprinting is simple. The exposed fingerprints should be as
+        uniform as possible so that no browser can be uniquely identifiable. Many modifications have already been made
+        by Tor developers to limit the quantity of identifying information but differences still exist to support a
+        wide range of configurations.') }}
+    </p>
+    <p>
+        {{ _('On this page, several checks are performed to find out if several attributes of your browser fingerprint are "acceptable", i.e.
+        they follow Tor basic guidelines. If they, this would mean that your fingerprint is not distinguishable from
+        the majority of Tor users, thus increasing your online privacy.') }}
+    </p>
+    <div>
+        {{ _('First visit?') }} &nbsp;
+        <button type="button" class="btn btn-default" onclick="startTour()">
+            {{ _('Take the tour') }}
+        </button>
+    </div>
+    <h2>{{ _('Results') }}</h2>
+
+    <div class="panel-group" data-intro="You will find here some step-by-step guides for different attributes in case your browser presents
+          some unacceptable values. If you see a <i class='fa fa-check'></i> next to an attribute's name, this means that your browser is properly
+          configured and you have nothing to do." data-step="2">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title" style="font-size: 14px">
+                    <a data-toggle="collapse" href="#screenPanel"><strong>Screen resolution</strong></a>
+                    <span id="screen"></span> <i id="screenRes" class="fa"></i>
+
+                    <button type="button" class="btn btn-primary btn-xs collapsed details" data-toggle="collapse" data-target="#screenPanel" style="float: right">
+                        Details
+                    </button>
+
+                </h4>
+            </div>
+            <div id="screenPanel" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div id="screenOk" style="display: none">
+                    Your Tor browser is at one of the recommended sizes!
+                    </div>
+                    <div id="screenNotOk" style="display: none">
+                        Your Tor browser is not at the recommended size. It should be either at 1000x1000 or at a multiple of 200x100.
+                        The easiest way to fix the resolution difference is to launch a new Tor identity and <strong>not</strong>
+                        change the size of the browser's window. The developer's console should also be closed since it has a direct
+                        impact on the reported screen dimensions.
+
+                        The only step required is to open the Onion menu on the left of the URL address bar and click on "New identity".
+                        You will clean your browser state and start from a fresh profile.
+                        <img src="{{ url_for('static', filename="images/identity.png") }}" class="img-responsive" alt="Responsive image">
+                    </div>
+                    <div id="screenNoJS" style="display: block">
+                        No JavaScript.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title" style="font-size: 14px">
+                    <a data-toggle="collapse" href="#sliderPanel"><strong>Security slider</strong></a>
+                    <button type="button" class="btn btn-primary btn-xs collapsed details" data-toggle="collapse" data-target="#sliderPanel" style="float: right">
+                        Details
+                    </button>
+                </h4>
+            </div>
+            <div id="sliderPanel" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div id="sliderLow" style="display: none">
+                        We detected that the security level of your Tor browser is set on "Low".
+                        Did you know that you can easily set the security level of your browser in the browser settings?<br>
+
+                        Open the Onion menu located on the left of the URL address bar and click on "Security settings...".
+                        <img src="{{ url_for('static', filename="images/settings1.png") }}" class="img-responsive" alt="Responsive image">
+
+                        Then, you can see the Security slider which provides a user-friendly interface to set your own security level.
+                        <img src="{{ url_for('static', filename="images/settings2.png") }}" class="img-responsive" alt="Responsive image">
+
+                        You can easily see the trade off between functionality and security. Gradually increasing the security level will
+                        disable more and more features reducing the vulnerability surface of your browser.
+                    </div>
+                    <div id="sliderMedium" style="display: none">
+                        We detected that the security level of your Tor browser is set on "Medium".
+                        Why not try a higher security level to increase your online privacy?
+                    </div>
+                    <div id="sliderHigh" style="display: none">
+                        We detected that you are on the highest security level in your Tor browser!
+                    </div>
+                    <div id="sliderNoJS" style="display: block">
+                        JavaScript is disabled in your browser. Enable it to know the level of your security slider.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Elements to detect the level of the security slider -->
+    <svg id="svg" xmlns="http://www.w3.org/2000/svg" height="100" width="100" style="display: none">
+	    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red"></circle>
+    </svg>
+
+    <!-- Load the acceptable and slider JS script -->
+    <script type="text/javascript" src="{{ url_for('static', filename="js/acceptable.js") }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename="js/slider.js") }}"></script>
+
+    <!-- IntroJS tour instructions -->
+    <script type="text/javascript">
+        function startTour(){
+           introJs().setOption('doneLabel', 'Continue the tour').start().oncomplete(function() {
+                window.location.href = '/globalStats?multipage';
+            });
+        }
+        if (window.location.search.indexOf("multipage") > -1) {
+            startTour();
+        }
+    </script>
+
+{% endblock %}

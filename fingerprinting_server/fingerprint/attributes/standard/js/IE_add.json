@@ -1,0 +1,7 @@
+{
+  "name" : "IE addBehavior",
+  "description" : "A boolean indicating if IE addBehavior is enabled or not",
+  "files" : ["IE_add.js"],
+  "variables" : ["IE addBehavior"],
+  "hash" : "False"
+}

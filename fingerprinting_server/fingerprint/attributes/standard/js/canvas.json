@@ -1,0 +1,7 @@
+{
+  "name" : "canvas",
+  "description" : "hash of the canvas fingerprint of the user's browser",
+  "files" : ["canvas.js"],
+  "variables" :["canvas"], 
+  "hash" : "True"
+}

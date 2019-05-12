@@ -1,0 +1,17 @@
+*.pickle
+*.idx
+*.out
+*.pyc
+*.log
+*.bak
+*.aux
+*.blg
+*.gz
+*.bbl
+*.txt
+*.swp
+*.DS_Store
+code/analysis
+code/mycollection
+code/client_simulator/.vagrant
+pet/

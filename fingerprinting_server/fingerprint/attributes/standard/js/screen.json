@@ -1,0 +1,8 @@
+{
+  "name" : "Screen",
+  "description" : "Information regarding the screen. This attribute is collected through JavaScript via the 'screen' object.",
+  "files" : ["screen.js"],
+  "variables" :["screen"], 
+  "hash" : "False",
+  "URL" : "https://developer.mozilla.org/en-US/docs/Web/API/Screen"
+}

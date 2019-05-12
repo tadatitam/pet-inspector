@@ -1,0 +1,8 @@
+{
+  "name" : "Language",
+  "description" : "A string indicating the language of the user's browser. This attribute is collected through JavaScript via the 'navigator' object.",
+  "files" : ["language.js"],
+  "variables" : ["language"],
+  "hash" : "False",
+  "URL" : "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/language/"
+}

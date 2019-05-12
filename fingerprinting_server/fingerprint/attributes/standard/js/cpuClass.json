@@ -1,0 +1,7 @@
+{
+  "name" : "cpuClass",
+  "description" : "CPU class",
+  "files" : ["cpuClass.js"],
+  "variables" : ["cpu class"],
+  "hash" : "False"
+}

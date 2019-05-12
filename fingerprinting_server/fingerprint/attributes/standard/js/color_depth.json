@@ -1,0 +1,8 @@
+{
+  "name" : "color_depth",
+  "description" : "A value indicating the color depth of the browser screen. This attribute is collected through JavaScript via the 'screen' object.",
+  "files" : ["color_depth.js"],
+  "variables" : ["color depth"],
+  "hash" : "False",
+  "URL" : "https://developer.mozilla.org/en-US/docs/Web/API/Screen/colorDepth"
+}
