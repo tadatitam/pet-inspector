@@ -162,7 +162,7 @@ def Tor(chromeflag, firefoxflag, userAgentHttp, acceptHttp, hostHttp, connection
     canvasJSHashed = "same"
     webGLJsHashed = "same"
     vendorWebGLJS, rendererWebGLJS = "Not supported", "Not supported"
-    platformJS = "same"
+#     platformJS = "same"
     timezoneJS = "same"
     languageHttp = "standard"
     orderHttp, connectionHttp, fontsFlash, resolutionFlash, languageFlash, platformFlash, octaneScore, sunspiderTime, pluginsJSHashed, canvasJS, webGLJs, fontsFlashHashed, hostHttp = standardize_uncollected(orderHttp, connectionHttp, fontsFlash, resolutionFlash, languageFlash, platformFlash, octaneScore, sunspiderTime, pluginsJSHashed, canvasJS, webGLJs, fontsFlashHashed, hostHttp)
